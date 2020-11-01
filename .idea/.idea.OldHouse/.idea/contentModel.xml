@@ -45539,6 +45539,7 @@
       <e p="UE4Game.Target.cs" t="Include" />
     </e>
     <e p="C:\UnrealProjects\OldHouse" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
@@ -45554,13 +45555,102 @@
       <e p="OldHouse.sln" t="IncludeFlat" />
       <e p="OldHouse.uproject" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Plugins" t="Include">
+        <e p="ALSV4_CPP-main" t="Include">
+          <e p="ALSV4_CPP.uplugin" t="Include" />
+          <e p="Config" t="Include">
+            <e p="DefaultInput.ini" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Icon128.png" t="Include" />
+            <e p="Readme_Content_1.png" t="Include" />
+            <e p="Readme_Content_2.gif" t="Include" />
+          </e>
+          <e p="Source" t="Include">
+            <e p="ALSV4_CPP" t="Include">
+              <e p="ALSV4_CPP.Build.cs" t="Include" />
+              <e p="ALSV4_CPP.cpp" t="Include" />
+              <e p="ALSV4_CPP.h" t="Include" />
+              <e p="Private" t="Include">
+                <e p="Character" t="Include">
+                  <e p="AI" t="Include">
+                    <e p="ALS_BTTask_GetRandomLocation.cpp" t="Include" />
+                    <e p="ALS_BTTask_SetFocusToPlayer.cpp" t="Include" />
+                    <e p="ALSAIController.cpp" t="Include" />
+                  </e>
+                  <e p="ALSBaseCharacter.cpp" t="Include" />
+                  <e p="ALSCharacter.cpp" t="Include" />
+                  <e p="ALSCharacterMovementComponent.cpp" t="Include" />
+                  <e p="ALSPlayerCameraManager.cpp" t="Include" />
+                  <e p="ALSPlayerController.cpp" t="Include" />
+                  <e p="Animation" t="Include">
+                    <e p="ALSCharacterAnimInstance.cpp" t="Include" />
+                    <e p="ALSPlayerCameraBehavior.cpp" t="Include" />
+                    <e p="Notify" t="Include">
+                      <e p="ALSAnimNotifyCameraShake.cpp" t="Include" />
+                      <e p="ALSAnimNotifyFootstep.cpp" t="Include" />
+                      <e p="ALSAnimNotifyGroundedEntryState.cpp" t="Include" />
+                      <e p="ALSNotifyStateEarlyBlendOut.cpp" t="Include" />
+                      <e p="ALSNotifyStateMovementAction.cpp" t="Include" />
+                      <e p="ALSNotifyStateOverlayOverride.cpp" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Library" t="Include">
+                  <e p="ALSMathLibrary.cpp" t="Include" />
+                </e>
+              </e>
+              <e p="Public" t="Include">
+                <e p="Character" t="Include">
+                  <e p="AI" t="Include">
+                    <e p="ALS_BTTask_GetRandomLocation.h" t="Include" />
+                    <e p="ALS_BTTask_SetFocusToPlayer.h" t="Include" />
+                    <e p="ALSAIController.h" t="Include" />
+                  </e>
+                  <e p="ALSBaseCharacter.h" t="Include" />
+                  <e p="ALSCharacter.h" t="Include" />
+                  <e p="ALSCharacterMovementComponent.h" t="Include" />
+                  <e p="ALSPlayerCameraManager.h" t="Include" />
+                  <e p="ALSPlayerController.h" t="Include" />
+                  <e p="Animation" t="Include">
+                    <e p="ALSCharacterAnimInstance.h" t="Include" />
+                    <e p="ALSPlayerCameraBehavior.h" t="Include" />
+                    <e p="Notify" t="Include">
+                      <e p="ALSAnimNotifyCameraShake.h" t="Include" />
+                      <e p="ALSAnimNotifyFootstep.h" t="Include" />
+                      <e p="ALSAnimNotifyGroundedEntryState.h" t="Include" />
+                      <e p="ALSNotifyStateEarlyBlendOut.h" t="Include" />
+                      <e p="ALSNotifyStateMovementAction.h" t="Include" />
+                      <e p="ALSNotifyStateOverlayOverride.h" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Library" t="Include">
+                  <e p="ALSAnimationStructLibrary.h" t="Include" />
+                  <e p="ALSCharacterEnumLibrary.h" t="Include" />
+                  <e p="ALSCharacterStructLibrary.h" t="Include" />
+                  <e p="ALSMathLibrary.h" t="Include" />
+                  <e p="ALSStructEnumLibrary.h" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="README.md" t="Include" />
       <e p="Source" t="Include">
         <e p="OldHouse" t="Include">
+          <e p="CharacterBase.cpp" t="Include" />
+          <e p="CharacterBase.h" t="Include" />
           <e p="OldHouse.Build.cs" t="Include" />
           <e p="OldHouse.cpp" t="Include" />
           <e p="OldHouse.h" t="Include" />
           <e p="OldHouseGameModeBase.cpp" t="Include" />
           <e p="OldHouseGameModeBase.h" t="Include" />
+          <e p="Player" t="Include">
+            <e p="PlayerBase.cpp" t="Include" />
+            <e p="PlayerBase.h" t="Include" />
+          </e>
         </e>
         <e p="OldHouse.Target.cs" t="Include" />
         <e p="OldHouseEditor.Target.cs" t="Include" />

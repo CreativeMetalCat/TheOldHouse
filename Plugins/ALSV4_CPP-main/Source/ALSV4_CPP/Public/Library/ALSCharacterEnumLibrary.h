@@ -69,7 +69,8 @@ enum class EALSOverlayState : uint8
 	Torch,
 	Binoculars,
 	Box,
-	Barrel
+	Barrel,
+	MeleeBig/*Like sword or axe*/
 };
 
 UENUM(BlueprintType)
