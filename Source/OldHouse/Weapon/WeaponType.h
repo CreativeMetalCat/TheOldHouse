@@ -14,5 +14,7 @@ enum class EWeaponType:uint8
 {
  EWT_Melee UMETA(DisplayName = "Melee"),
  EWT_MeleeBig UMETA(DisplayName = "MeleeBig"),
- EWT_Pistol UMETA(DisplayName = "Pistol")
+ EWT_Pistol UMETA(DisplayName = "Pistol"),
+ EWT_Rifle UMETA(DisplayName = "Rifle"),
+ EWT_Shotgun UMETA(DisplayName = "Shotgun")
 };

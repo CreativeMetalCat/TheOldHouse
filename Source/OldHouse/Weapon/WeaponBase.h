@@ -40,6 +40,10 @@ public:
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Type)
 	EWeaponType Type = EWeaponType::EWT_Melee;
 
+	/*if true weapon shoots as long as it has ammo in the clip*/
+	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Type)
+	bool bAutoFire = false;
+
 	/*How much ammo is currently in the clip*/
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Ammo)
 	int Ammo = 0;
