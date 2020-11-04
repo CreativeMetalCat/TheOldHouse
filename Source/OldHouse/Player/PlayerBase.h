@@ -21,12 +21,24 @@ class OLDHOUSE_API APlayerBase : public ACharacterBase
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Weapons)
 	TArray<AWeaponBase*>Weapons;
 
+	/*This weapons will be given to player on begin play*/
+	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Weapons)
+	TArray<TSubclassOf<AWeaponBase>> WeaponClasses;
+
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Weapons)
 	int32 CurrentWeaponId = -1;
 
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Weapons)
 	int32 PreviousWeaponId = -1;
 
+	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Health)
+	float Health = 100.f;
+
 	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Weapons)
 	bool SelectWeapon(int32 Id);
+
+	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Weapons)
+	void Reload();
+
+	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 };

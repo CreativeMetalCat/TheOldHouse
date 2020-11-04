@@ -40,6 +40,14 @@ public:
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Type)
 	EWeaponType Type = EWeaponType::EWT_Melee;
 
+	/*How much ammo is currently in the clip*/
+	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Ammo)
+	int Ammo = 0;
+
+	/*How much ammo is usually in the clip*/
+	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Ammo)
+	int DefaultAmmo = 0;
+
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Damage)
 	float Damage = 0.f;
 
