@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 
+
+#include "Components/BoxComponent.h"
 #include "OldHouse/CharacterBase.h"
 #include "OldHouse/Weapon/WeaponBase.h"
 
@@ -18,6 +20,11 @@ class OLDHOUSE_API APlayerBase : public ACharacterBase
 {
 	GENERATED_BODY()
 	public:
+	APlayerBase();
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite)
+	UBoxComponent *InteractionCollision;
+	
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Weapons)
 	TArray<AWeaponBase*>Weapons;
 
@@ -41,6 +48,9 @@ class OLDHOUSE_API APlayerBase : public ACharacterBase
 	void Reload();
 
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+
+	UFUNCTION(BlueprintCallable,Category= Interaction)
+	virtual void InteractAction();
 
 	UFUNCTION(BlueprintPure)
 	virtual EWeaponType GetCurrentWeaponType(bool&hasCurrentWeapon);
