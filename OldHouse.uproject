@@ -9,7 +9,8 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"ALSV4_CPP"
+				"ALSV4_CPP",
+				"Engine"
 			]
 		}
 	],
