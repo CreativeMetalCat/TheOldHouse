@@ -61,5 +61,13 @@ public:
 	/*For melee weapons*/
 	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Attack)
 	void Attack(UAnimMontage*AttackAnim);
-	
+
+	/*For actual reload(updating ammo count)*/
+	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Reload)
+	void Reload();
+
+	/*For spawning empty clips, playing sounds etc.*/
+	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Reload)
+    void PlayReloadEffects();
 };
+

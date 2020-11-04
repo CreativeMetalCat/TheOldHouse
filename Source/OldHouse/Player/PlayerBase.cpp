@@ -28,3 +28,25 @@ void APlayerBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
     PlayerInputComponent->BindAction("ReloadAction", IE_Pressed, this, &APlayerBase::Reload);
 }
+
+EWeaponType APlayerBase::GetCurrentWeaponType(bool& hasCurrentWeapon)
+{
+    hasCurrentWeapon = false;
+    if(Weapons.IsValidIndex(CurrentWeaponId))
+    {
+        hasCurrentWeapon = true;
+        return Weapons[CurrentWeaponId]->Type;
+    }
+    return EWeaponType::EWT_Melee;
+}
+
+AWeaponBase* APlayerBase::GetCurrentWeapon(bool& hasCurrentWeapon)
+{
+    hasCurrentWeapon = false;
+    if(Weapons.IsValidIndex(CurrentWeaponId))
+    {
+        hasCurrentWeapon = true;
+        return Weapons[CurrentWeaponId];
+    }
+    return nullptr;
+}

@@ -41,4 +41,10 @@ class OLDHOUSE_API APlayerBase : public ACharacterBase
 	void Reload();
 
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+
+	UFUNCTION(BlueprintPure)
+	virtual EWeaponType GetCurrentWeaponType(bool&hasCurrentWeapon);
+
+	UFUNCTION(BlueprintPure)
+    virtual AWeaponBase* GetCurrentWeapon(bool&hasCurrentWeapon);
 };

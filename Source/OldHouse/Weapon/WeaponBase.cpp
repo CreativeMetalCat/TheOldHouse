@@ -25,6 +25,15 @@ void AWeaponBase::Tick(float DeltaTime)
 
 }
 
+void AWeaponBase::PlayReloadEffects_Implementation()
+{
+	
+}
+
+void AWeaponBase::Reload_Implementation()
+{
+}
+
 void AWeaponBase::Attack_Implementation(UAnimMontage* AttackAnim)
 {
 	
