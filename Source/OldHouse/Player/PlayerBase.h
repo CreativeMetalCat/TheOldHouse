@@ -38,8 +38,19 @@ class OLDHOUSE_API APlayerBase : public ACharacterBase
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Weapons)
 	int32 PreviousWeaponId = -1;
 
+	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Ammo)
+	TMap<EWeaponType,int> Ammo;
+
 	UPROPERTY(BlueprintReadWrite,EditAnywhere,Category= Health)
 	float Health = 100.f;
+
+	/*Gets how much ammo player has for this weapon type*/
+	UFUNCTION(BlueprintPure,Category= Ammo)
+	int GetAmmoForWeaponType(EWeaponType type);
+
+	/*Remove specific amount of ammo of this type(used in reloading)*/
+	UFUNCTION(BlueprintCallable,Category= Ammo)
+	void RemoveAmmo(EWeaponType type,int amount);
 
 	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Weapons)
 	bool SelectWeapon(int32 Id);

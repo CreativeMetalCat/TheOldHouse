@@ -62,6 +62,9 @@ public:
 	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Fire)
 	void Fire(FVector Location,FRotator Rotation);
 
+	UFUNCTION(BlueprintPure,Category= Fire)
+	virtual bool CanShoot();
+
 	/*For melee weapons*/
 	UFUNCTION(BlueprintCallable,BlueprintNativeEvent,Category= Attack)
 	void Attack(UAnimMontage*AttackAnim);

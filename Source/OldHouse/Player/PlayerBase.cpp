@@ -30,6 +30,35 @@ APlayerBase::APlayerBase()
     InteractionCollision->SetupAttachment(RootComponent);
 }
 
+int APlayerBase::GetAmmoForWeaponType(EWeaponType type)
+{
+    TArray<EWeaponType>keys;
+    Ammo.GetKeys(keys);
+    TArray<int>count;
+    Ammo.GenerateValueArray(count);
+    
+    if(keys.Find(type) != -1)
+    {
+        return count[keys.Find(type)];
+    }
+    return -1;
+}
+
+void APlayerBase::RemoveAmmo(EWeaponType type, int amount)
+{
+    if(GetAmmoForWeaponType(type) > 0)
+    {
+        TArray<EWeaponType> keys;
+        Ammo.GetKeys(keys);
+        TArray<int> count;
+        Ammo.GenerateValueArray(count);
+
+        const int Res = count[keys.Find(type)] - amount;
+
+        Ammo.Add(type, Res > 0 ? Res : 0);
+    }
+}
+
 void APlayerBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);

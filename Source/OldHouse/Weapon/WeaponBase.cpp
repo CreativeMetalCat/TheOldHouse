@@ -25,6 +25,11 @@ void AWeaponBase::Tick(float DeltaTime)
 
 }
 
+bool AWeaponBase::CanShoot()
+{
+	return Ammo > 0;
+}
+
 void AWeaponBase::PlayReloadEffects_Implementation()
 {
 	
@@ -41,5 +46,7 @@ void AWeaponBase::Attack_Implementation(UAnimMontage* AttackAnim)
 
 void AWeaponBase::Fire_Implementation(FVector Location, FRotator Rotation)
 {
+	Ammo--;
+	if(Ammo < 0){Ammo = 0;}
 }
 
